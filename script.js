@@ -20,88 +20,61 @@ while (lengthPrompt > 128) {
 //console.log(lengthPrompt+ " test reassignment of length")
 
 
-var hasLowerCase = window.confirm("Would you like lower case letters?")
-///console.log(hasLowerCase + " hasLowerCase test")
-  if (hasLowerCase){
-    var upperAndLowerArray = upperCaseArray.concat(lowerCaseArray)
-    console.log(upperAndLowerArray)
-  }
-var hasSpecialCharacters = window.confirm("Would you like special characters?")
-//console.log(hasSpecialCharacters + " hasSpecialCharacters test")
-  if (hasSpecialCharacters){
-    var upperAndSpecial = upperCaseArray.concat(specialCharacters)
-    console.log(upperAndSpecial)
-
-  }
-var hasNumericValues = window.confirm ("Would you like numeric values?")
-//console.log (hasNumericValues + " hasNumericValues test")
-  if (hasNumericValues) {
-    var upperAndNumeric = upperCaseArray.concat(numericValues)
-    console.log(upperAndNumeric)
-
-  }
-
-//console.log(upperAndLowerArray)
-var upperAndLowerAndSpecial = upperAndSpecial.concat(lowerCaseArray)
-//console.log(upperAndLowerAndSpecial)
-var upperAndLowerAndNumeric = upperAndNumeric.concat(lowerCaseArray)
-//console.log(upperAndLowerAndNumeric)
-var upperAndSpecialAndNumeric = upperAndNumeric.concat(specialCharacters)
-//console.log(upperAndSpecialAndNumeric)
-var allCharacters = upperAndSpecialAndNumeric.concat(lowerCaseArray)
-//console.log(allCharacters)
-
-/*let shuffledAllCharacters = allCharacters.sort(function () { //shuffles all characters
-  return Math.random() -0.5;
-})
-console.log (shuffledAllCharacters)*/
-
-
-
-
-/*var indexGenerator = []; //makes a rando list of #s based on length picked, haven't fixed that it goes up to 70 when we might not need to 
-for (i=0; i<lengthPrompt; i++){
-  var possibleCharacters= 
-  indexGenerator.push(Math.floor(Math.random()*70));
+var hasLowerCase = window.confirm("Would you like lower case letters?");
+if(hasLowerCase){
+  possibleCharacters = upperCaseArray.concat(lowerCaseArray);
+  password.push(possibleCharacters);
+  console.log(possibleCharacters)
 }
 
-indexGenerator = indexGenerator.toString();
-console.log (indexGenerator); 
-console.log(shuffledAllCharacters.at[indexGenerator])
-*/
+/*var upperAndLowerArray = upperCaseArray.concat(lowerCaseArray);
+console.log(upperAndLowerArray);*/
+
+var hasSpecialCharacters = window.confirm("Would you like special characters?");
+if (hasSpecialCharacters) {
+  possibleCharacters = possibleCharacters.concat(specialCharacters);
+  password.push(possibleCharacters);
+  console.log(possibleCharacters);
+}
+/*var upperAndSpecial = upperCaseArray.concat(specialCharacters);
+console.log(upperAndSpecial);*/
 
 
+var hasNumericValues = window.confirm ("Would you like numeric values?");
+if (hasNumericValues) {
+  possibleCharacters = possibleCharacters.concat(numericValues);
+  password.push(possibleCharacters);
+  console.log(possibleCharacters);
+}
+
+//for (var i=0; i<lengthPrompt; i++){
+  
+var stupid= []
+while (stupid.length<lengthPrompt){
+  var r = Math.floor(Math.random()*possibleCharacters.length) + 1;
+  if(stupid.indexOf(r) === -1) stupid.push(r);
+    //password [i]= possibleCharacters [i];
+}
+console.log (stupid + " what")
+function getRandomIndex () {
+  for (var x=0; x< stupid.length; x++) {
+    console.log(possibleCharacters(stupid[x]))
+}
+}
+console.log(getRandomIndex())
 
 
-/*
-function generatePassword() {
-  //if  (hasLowerCase && hasSpecialCharacters && hasNumericValues) {
-  for (var i=0; i<indexGenerator; i++);
-    var generatedPassword = shuffledAllCharacters[indexGenerator[i]];
-    //var generatedPassword = indexGenerator.map( i => shuffledAllCharacters)
-    console.log(generatedPassword);
+function getRandomIndex(/*possibleCharacters = []*/){
+  /*if (Array.isArray())*/
+    var testing = (Math.floor(Math.random() * lengthPrompt))*lengthPrompt //*lengthPrompt
+    console.log(testing)
+    //return possibleCharacters[index]
+
   }
 
-generatePassword (console.log("Hi"));
-console.log(generatedPassword);
-/*function getRandomIndex(numberArray = []){
-  if (Array.isArray(numberArray)){
-    var index = Math.floor(Math.random() * lengthPrompt) //*lengthPrompt
-    return numberArray[index]
+  console.log(possibleCharacters(testing))
+  //return null;
 
-  }
-  return null;
-
-} */
-function getRandomIndex(numberArray = []){
-  if (Array.isArray(numberArray)){
-    var index = Math.floor(Math.random() * lengthPrompt) //*lengthPrompt
-    return numberArray[index]
-
-  }
-  return null;
-
-} 
 
 /*
 function generatePassword(){
