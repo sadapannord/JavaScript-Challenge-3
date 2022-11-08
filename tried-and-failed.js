@@ -8,7 +8,7 @@ var allCharacters = upperAndSpecialAndNumeric.concat(lowerCaseArray)
 //console.log(allCharacters)
 
 
-/*let shuffledAllCharacters = allCharacters.sort(function () { //shuffles all characters
+let shuffledAllCharacters = allCharacters.sort(function () { //shuffles all characters
   return Math.random() -0.5;
 })
 console.log (shuffledAllCharacters)*/

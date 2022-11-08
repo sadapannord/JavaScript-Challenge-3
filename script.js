@@ -19,61 +19,41 @@ while (lengthPrompt > 128) {
 }
 //console.log(lengthPrompt+ " test reassignment of length")
 
-
 var hasLowerCase = window.confirm("Would you like lower case letters?");
 if(hasLowerCase){
   possibleCharacters = upperCaseArray.concat(lowerCaseArray);
   password.push(possibleCharacters);
-  console.log(possibleCharacters)
-}
-
-/*var upperAndLowerArray = upperCaseArray.concat(lowerCaseArray);
-console.log(upperAndLowerArray);*/
+  let shuffledAllCharacters = possibleCharacters.sort(function () {//shuffles all characters
+    return Math.random() -0.5;})
+    console.log(shuffledAllCharacters)
+  }
 
 var hasSpecialCharacters = window.confirm("Would you like special characters?");
 if (hasSpecialCharacters) {
   possibleCharacters = possibleCharacters.concat(specialCharacters);
   password.push(possibleCharacters);
-  console.log(possibleCharacters);
-}
-/*var upperAndSpecial = upperCaseArray.concat(specialCharacters);
-console.log(upperAndSpecial);*/
+  let shuffledAllCharacters = possibleCharacters.sort(function () {//shuffles all characters
+    return Math.random() -0.5;})
+    console.log(shuffledAllCharacters)
+  }
 
 
 var hasNumericValues = window.confirm ("Would you like numeric values?");
 if (hasNumericValues) {
   possibleCharacters = possibleCharacters.concat(numericValues);
   password.push(possibleCharacters);
-  console.log(possibleCharacters);
-}
-
-//for (var i=0; i<lengthPrompt; i++){
+  let shuffledAllCharacters = possibleCharacters.sort(function () {//shuffles all characters
+    return Math.random() -0.5;})
+    console.log(shuffledAllCharacters)
+  }
   
 var randomCharacters= []
 while (randomCharacters.length<lengthPrompt){
   var r = Math.floor(Math.random()*possibleCharacters.length) + 1;
+  console.log(r)
   if(randomCharacters.indexOf(r) === -1) randomCharacters.push(possibleCharacters[r]);
 }
-console.log (randomCharacters + " what")
-function getRandomIndex () {
-  for (var x=0; x< randomCharacters.length; x++) {
-    console.log(possibleCharacters(randomCharacters[x]))
-}
-}
-console.log(getRandomIndex())
-
-
-function getRandomIndex(/*possibleCharacters = []*/){
-  /*if (Array.isArray())*/
-    var testing = (Math.floor(Math.random() * lengthPrompt))*lengthPrompt //*lengthPrompt
-    console.log(testing)
-    //return possibleCharacters[index]
-
-  }
-
-  console.log(possibleCharacters(testing))
-  //return null;
-
+console.log (randomCharacters + " These are our randomly generated characters!")
 
 /*
 function generatePassword(){
@@ -91,5 +71,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); */
+/* Add event listener to generate button
+generateBtn.addEventListener("click", writePassword)*/
