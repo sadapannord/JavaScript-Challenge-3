@@ -49,16 +49,15 @@ if (hasNumericValues) {
 
 //for (var i=0; i<lengthPrompt; i++){
   
-var stupid= []
-while (stupid.length<lengthPrompt){
+var randomCharacters= []
+while (randomCharacters.length<lengthPrompt){
   var r = Math.floor(Math.random()*possibleCharacters.length) + 1;
-  if(stupid.indexOf(r) === -1) stupid.push(r);
-    //password [i]= possibleCharacters [i];
+  if(randomCharacters.indexOf(r) === -1) randomCharacters.push(possibleCharacters[r]);
 }
-console.log (stupid + " what")
+console.log (randomCharacters + " what")
 function getRandomIndex () {
-  for (var x=0; x< stupid.length; x++) {
-    console.log(possibleCharacters(stupid[x]))
+  for (var x=0; x< randomCharacters.length; x++) {
+    console.log(possibleCharacters(randomCharacters[x]))
 }
 }
 console.log(getRandomIndex())
