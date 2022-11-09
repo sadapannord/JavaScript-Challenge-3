@@ -48,3 +48,7 @@ console.log(generatedPassword);
   return null;
 
 } */
+/*This shuffled all characters. Unnecessarily.  
+let shuffledAllCharacters = possibleCharacters.sort(function () {
+  return Math.random() -0.5;})
+  console.log(shuffledAllCharacters)*/ 

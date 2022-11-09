@@ -20,35 +20,30 @@ function writePassword() {
   var hasLowerCase = window.confirm("Would you like lower case letters?");
   if(hasLowerCase){
     possibleCharacters = upperCaseArray.concat(lowerCaseArray);
-    password.push(possibleCharacters);
-    let shuffledAllCharacters = possibleCharacters.sort(function () {//shuffles all characters
-      return Math.random() -0.5;})
-      console.log(shuffledAllCharacters)
-    }
+    password.push(possibleCharacters);}
+    else{
+     possibleCharacters = upperCaseArray;}
+     
+    console.log(possibleCharacters)
   
   var hasSpecialCharacters = window.confirm("Would you like special characters?");
   if (hasSpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     password.push(possibleCharacters);
-    let shuffledAllCharacters = possibleCharacters.sort(function () {//shuffles all characters
-      return Math.random() -0.5;})
-      console.log(shuffledAllCharacters)
     }
-  
-  
+    console.log(possibleCharacters)
+
   var hasNumericValues = window.confirm ("Would you like numeric values?");
   if (hasNumericValues) {
     possibleCharacters = possibleCharacters.concat(numericValues);
     password.push(possibleCharacters);
-    let shuffledAllCharacters = possibleCharacters.sort(function () {//shuffles all characters
-      return Math.random() -0.5;})
-      console.log(shuffledAllCharacters)
     }
-    
+    console.log(possibleCharacters)
+
   var randomCharacters= []
   while (randomCharacters.length<lengthPrompt){
     var r = Math.floor(Math.random()*possibleCharacters.length) + 1;
-    //console.log(r)
+    console.log(r)
     if(randomCharacters.indexOf(r) === -1) randomCharacters.push(possibleCharacters[r]);
   }
   console.log (randomCharacters)
