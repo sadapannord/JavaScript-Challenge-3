@@ -51,13 +51,9 @@ function writePassword() {
   passwordText.textContent= randomCharacters.join("");
 }
 
-// Add event listener to generate button
+// Add event listener to generate button (this makes things happen when you click "generate password")
 generateBtn.addEventListener("click", writePassword);
 //The preceding code was given!!!!!
-
-/*function generatePassword(){
-  passwordText.textContent=(randomCharacters);
-}*/
 
 
 
@@ -70,20 +66,3 @@ var possibleCharacters = [];
 let mustHaveCharacters = [];
 let password = []
 
-
-//add on-click event to start prompts
-
-
-
-
-/* Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-/* Add event listener to generate button
-generateBtn.addEventListener("click", writePassword)*/
